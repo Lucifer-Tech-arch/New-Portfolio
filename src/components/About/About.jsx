@@ -75,7 +75,7 @@ const About = () => {
             efficient solutions.
           </p>
           <a
-            href="https://drive.google.com/file/d/1_n5Hj05-NUaLUxMp7jP1nRFru4zWFSe5/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_pLl2wjYVCU-wnqXIhjhYr0YC0SJXvwv/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition-all duration-300 transform hover:scale-105"
