@@ -36,7 +36,7 @@ import bsaLogo from './assets/education_logo/bsa.jpg';
 import tripnestLogo from './assets/work_logo/tripnest_logo.png';
 import vlcLogo from './assets/work_logo/vlc_logo.png';
 import dishaLogo from './assets/work_logo/disha_logo.png';
-import tictactoeLogo from './assets/work_logo/tictactoe_logo.png';
+import unifyaiLogo from './assets/work_logo/unifyai_logo.png';
 
 export const SkillsInfo = [
   {
@@ -175,12 +175,12 @@ export const SkillsInfo = [
     },
     {
       id: 3,
-      title: "Tic-Tac-Toe Game",
+      title: "UnifyAI",
       description:
-        "Developed an engaging Tic Tac Toe game with an intuitive interface, responsive design, and smooth gameplay for an enjoyable experience.",
-      image: tictactoeLogo,
-      tags: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/Lucifer-Tech-arch/PRODIGY_WD_02",
-      webapp: "https://lucifer-tech-arch.github.io/PRODIGY_WD_02/",
+        "Delivered a unified AI platform that reduces content creation time by 80%. Improved image editing speed by 50% using server-side optimization. Enhanced user engagement through real-time preview and feedback systems.",
+      image: unifyaiLogo,
+      tags: ["React.js", "Node.js", "Express.js", "PostgreSQl", "Clerk Auth","OpenAI Gemini model","Tailwind CSS","Material UI"],
+      github: "https://github.com/Lucifer-Tech-arch/UnifyAI",
+      webapp: "https://unify-ai-z793.vercel.app/",
     },
   ];  
