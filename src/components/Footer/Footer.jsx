@@ -42,7 +42,7 @@ const Footer = () => {
             { icon: <FaFacebook />, link: "https://www.facebook.com/profile.php?id=100041176816153" },
             { icon: <SiLeetcode />, link: "https://leetcode.com/u/Lucifer_123Krishna/" },
             { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/krishna-goswami-9040b9240/" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/coding_.master/" },
+            { icon: <FaInstagram />, link: "https://www.instagram.com/itz_krishna_since2005/" },
             { icon: <FaYoutube />, link: "https://www.youtube.com/@krishnagoswami7178" },
             
           ].map((item, index) => (

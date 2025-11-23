@@ -41,12 +41,8 @@ const useTypingEffect = (words, { loop = true, typeSpeed = 100, deleteSpeed = 50
 };
 
 const About = () => {
-  const jobTitles = ['Fullstack Developer', 'Backend Developer', 'Java Developer', 'AI enthusiast'];
+  const jobTitles = ['Fullstack Developer', 'Backend Developer', 'Data Analyst', 'GenAI Enthusiast'];
   const typedText = useTypingEffect(jobTitles, {});
-    
-  // Since we can't use local assets in this environment, 
-  // I'm using a placeholder. You can replace this with your original image path.
-  const profileImageUrl = 'https://placehold.co/512x512/1a1a2e/ffffff?text=TK';
 
   return (
     <section
@@ -54,7 +50,7 @@ const About = () => {
       className="py-16 px-4 sm:px-8 font-sans text-white"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center max-w-6xl mx-auto gap-12">
-        
+
         {/* Left Side: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 leading-tight">
@@ -68,11 +64,9 @@ const About = () => {
             <span className="text-gray-300 animate-pulse">|</span>
           </h3>
           <p className="text-base sm:text-lg text-gray-400 mb-10 mt-8 leading-relaxed max-w-lg mx-auto md:mx-0">
-            I am a full-stack developer with experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN Stack, Java and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            I am a Passionate Full Stack Developer specializing in building AI-powered and GenAI-integrated web applications. Skilled in MERN, Next.js, Java and
+            Python with expertise in AI Automation for implementing LLM-based intelligence. Experienced in deploying AI-enhanced user experiences across cloud-based environments.
+
           </p>
           <a
             href=""
@@ -96,7 +90,7 @@ const About = () => {
               src={Profile}
               alt="Tarun Kaushik"
               className="w-full h-full rounded-full object-cover"
-              onError={(e) => { e.target.onerror = null; e.target.src='https://placehold.co/512x512/1a1a2e/ffffff?text=Image+Error'; }}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/512x512/1a1a2e/ffffff?text=Image+Error'; }}
             />
           </div>
         </div>

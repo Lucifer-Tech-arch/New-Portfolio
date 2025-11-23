@@ -12,10 +12,13 @@ import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
+import seoulixlogo from './assets/company_logo/download.png';
+import dockerlogo from './assets/tech_logo/docker.png'
 import firebaseLogo from './assets/tech_logo/firebase.png';
-import cLogo from './assets/tech_logo/c.png';
+import pythonlogo from './assets/tech_logo/python.png';
 import javaLogo from './assets/tech_logo/java.png';
 import typescriptLogo from './assets/tech_logo/typescript.png';
+import postgresslogo from './assets/tech_logo/postgress.png'
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
@@ -26,7 +29,6 @@ import cursor from './assets/tech_logo/cursorAI.png'
 
 // Experience Section Logo's
 import ioclLogo from './assets/company_logo/iocl.png';
-import prodigyLogo from './assets/company_logo/prodigy.jpeg';
 
 // Education Section Logo's
 import kmpsLogo from './assets/education_logo/kmps.png';
@@ -60,13 +62,14 @@ export const SkillsInfo = [
       { name: 'Express JS', logo: expressjsLogo },
       { name: 'MySQL', logo: mysqlLogo },
       { name: 'MongoDB', logo: mongodbLogo },
+      { name: 'PostgreSQL', logo: postgresslogo },
       { name: 'Firebase', logo: firebaseLogo },
     ],
   },
   {
     title: 'Languages',
     skills: [
-      { name: 'C', logo: cLogo },
+      { name: 'Python', logo: pythonlogo },
       { name: 'Java', logo: javaLogo },
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'TypeScript', logo: typescriptLogo },
@@ -81,41 +84,43 @@ export const SkillsInfo = [
       { name: 'Postman', logo: postmanLogo },
       { name: 'Vercel', logo: vercelLogo },
       { name: 'Netlify', logo: netlifyLogo },
-      {name: 'Cursor AI', logo: cursor}
+      {name: 'Cursor AI', logo: cursor},
+      { name: 'Docker', logo: dockerlogo}
     ],
   },
 ];
 
   export const experiences = [
     {
-      id: 0,
+      id: 1,
+      img: seoulixlogo,
+      role: "Full Stack Developer Intern",
+      company: "Seoulix Technologies (OPC) pvt Ltd.",
+      date: "November 2025 - Present",
+      desc: " Working with MERN and Next.js to build web applications, Creating AI automation workflows using n8n and Lang Chain.Developing Frontend Components, backend Restful APIs, and database operations using SQL, NoSQL",
+      skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "My SQL",
+        "n8n AI Automation",
+        "Lang Chain"
+      ],
+    },
+    {
+      id: 1,
       img: ioclLogo,
-      role: "Summar Intern",
+      role: "Summer Intern",
       company: "Indian Oil Corporation Limited (IOCL)",
       date: "May 2025 - June 2025",
-      desc: "Spearheaded the creation of an advanced e-stationary management web page UI at IOCL. Engineered optimized code leveraging JavaScript and CSS resulting in improved design of the e-stationary page. Enhanced the UI using bootstrap framework an also gain valuable knowledge about Qlik sense tool.",
+      desc: "Spearheaded the creation of an advanced e-stationary management web page UI at IOCL. Engineered optimized code leveraging JavaScript and CSS resulting in improved design of the e-stationary page. Enhanced the UI using bootstrap framework an also gain valuable knowledge about Qlik sense tool",
       skills: [
         "HTML",
         "CSS",
         "JavaScript",
         "Bootstrap",
-      ],
-    },
-    {
-      id: 1,
-      img: prodigyLogo,
-      role: "Web Developer Intern",
-      company: "Prodidy Infotech Pvt. Ltd.",
-      date: "December 2024 - January 2025",
-      desc: "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using technologies such as HTML, CSS, JavaScript, PHP, SQL, Bootstrap, and ReactJS. Worked closely with the team to deliver responsive, high-performance web applications and improve user experience through seamless integration of various technologies.",
-      skills: [
-        "JavaScript",
-        "Tailwind CSS",
-        "HTML",
-        "CSS",
-        "Git",
-        "GitHub",
-        "Open API's"
+        "Qluick Sence Tool"
       ],
     },
   ];
