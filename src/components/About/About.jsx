@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Profile from '../../assets/Profile2.jpg'
+import Profile from '../../assets/profile.jpeg'
 
 // Custom hook to handle the typing effect, removing the need for an external library.
 const useTypingEffect = (words, { loop = true, typeSpeed = 100, deleteSpeed = 50, delay = 2000 }) => {
@@ -35,13 +35,13 @@ const useTypingEffect = (words, { loop = true, typeSpeed = 100, deleteSpeed = 50
     const timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, wordIndex, words, typeSpeed, deleteSpeed, delay, loop]);
+  }, [text, isDeleting, wordIndex, words, typeSpeed, deleteSpeed, delay, loop, typingSpeed]);
 
   return text;
 };
 
 const About = () => {
-  const jobTitles = ['Fullstack Developer', 'Backend Developer', 'Data Analyst', 'GenAI Enthusiast'];
+  const jobTitles = ['Fullstack Developer', 'Backend Developer', 'Agentic AI Engineer', 'Software Engineer'];
   const typedText = useTypingEffect(jobTitles, {});
 
   return (
@@ -64,8 +64,7 @@ const About = () => {
             <span className="text-gray-300 animate-pulse">|</span>
           </h3>
           <p className="text-base sm:text-lg text-gray-400 mb-10 mt-8 leading-relaxed max-w-lg mx-auto md:mx-0">
-            I am a Passionate Full Stack Developer specializing in building AI-powered and GenAI-integrated web applications. Skilled in MERN, Next.js, Java and
-            Python with expertise in AI Automation for implementing LLM-based intelligence. Experienced in deploying AI-enhanced user experiences across cloud-based environments.
+            AI Full Stack Developer specializing in scalable SaaS platforms, ERP & CRM systems, AI-powered applications, automation workflows, and modern web experiences using MERN, Next.js, React Native, Node.js, and Agentic AI solutions. Passionate about building high-performance, user-centric digital products with clean UI/UX and real-world impact.
 
           </p>
           <a

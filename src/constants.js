@@ -12,7 +12,6 @@ import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
-import seoulixlogo from './assets/company_logo/download.png';
 import dockerlogo from './assets/tech_logo/docker.png'
 import firebaseLogo from './assets/tech_logo/firebase.png';
 import pythonlogo from './assets/tech_logo/python.png';
@@ -27,14 +26,16 @@ import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
 import cursor from './assets/tech_logo/cursorAI.png'
 
-// Experience Section Logo's
+// Experience Section Logos
 import ioclLogo from './assets/company_logo/iocl.png';
+import seoulixlogo from './assets/company_logo/download.png';
+import bp from "./assets/company_logo/bp.png";
 
-// Education Section Logo's
+// Education Section Logos
 import kmpsLogo from './assets/education_logo/kmps.png';
 import bsaLogo from './assets/education_logo/bsa.jpg';
 
-// Project Section Logo's
+// Project Section Logos
 import tripnestLogo from './assets/work_logo/tripnest_logo.png';
 import vlcLogo from './assets/work_logo/vlc_logo.png';
 import dishaLogo from './assets/work_logo/disha_logo.png';
@@ -92,11 +93,29 @@ export const SkillsInfo = [
 
   export const experiences = [
     {
-      id: 1,
+      id: 0,
+      img: bp,
+      role: "Full Stack Engineer",
+      company: "BluParrot Ventures Pvt Ltd",
+      date: "January 2026 - Present",
+      desc: "Contributed to AI-powered recruitment and voice agent platforms using LLMs, ElevenLabs, and n8n, automating candidate profiling, call management, transcripts, and workflow operations. Worked on ERP and Zoho CRM integrations to streamline business workflows, customer management, and production operations.",
+      skills: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MySQL",
+        "AI Agents",
+        "Next.js",
+        "Nest.js"
+      ],
+    },
+    {
+      id: 2,
       img: seoulixlogo,
       role: "Full Stack Developer Intern",
       company: "Seoulix Technologies (OPC) pvt Ltd.",
-      date: "November 2025 - Present",
+      date: "November 2025 - January 2026",
       desc: " Working with MERN and Next.js to build web applications, Creating AI automation workflows using n8n and Lang Chain.Developing Frontend Components, backend Restful APIs, and database operations using SQL, NoSQL",
       skills: [
         "React.js",
@@ -109,7 +128,7 @@ export const SkillsInfo = [
       ],
     },
     {
-      id: 1,
+      id: 3,
       img: ioclLogo,
       role: "Summer Intern",
       company: "Indian Oil Corporation Limited (IOCL)",
