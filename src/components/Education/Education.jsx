@@ -1,5 +1,8 @@
 import React from "react";
-import { education } from "../../constants"; // Import the education data
+import { motion } from "framer-motion";
+import { education } from "../../constants";
+import SectionHeading from "../motion/SectionHeading";
+import Reveal from "../motion/Reveal";
 
 const Education = () => {
   return (
@@ -7,66 +10,72 @@ const Education = () => {
       id="education"
       className="py-9 pb-24 px-4 sm:px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
     >
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are
-          the details of my academic background.
-        </p>
-      </div>
+      <SectionHeading
+        title="EDUCATION"
+        subtitle="My education has been a journey of learning and development. Here are the details of my academic background."
+      />
 
-      {/* Education Timeline */}
       <div className="relative">
-        {/* Vertical line - positioned slightly left for a better mobile layout */}
-        <div className="absolute top-0 w-1 h-full bg-gray-400 left-5 sm:left-1/2 sm:transform sm:-translate-x-1/2"></div>
+        <motion.div
+          className="absolute top-0 w-1 h-full bg-gradient-to-b from-[#8245ec] via-purple-700/50 to-transparent left-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 origin-top"
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        />
 
-        {/* Education Entries */}
         {education.map((edu, index) => (
           <div key={edu.id} className="relative w-full mb-12 flex">
-            {/* Left side container for the circle, consistent alignment */}
-            <div className="absolute z-10 w-10 h-10 sm:w-14 sm:h-14 bg-gray-900 border-4 border-[#8245ec] rounded-full left-5 sm:left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-              <img
-                src={edu.img}
-                alt={edu.school}
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
+            <Reveal direction="scale">
+              <motion.div
+                className="absolute z-10 w-10 h-10 sm:w-14 sm:h-14 bg-gray-900 border-4 border-[#8245ec] rounded-full left-5 sm:left-1/2 transform -translate-x-1/2 flex items-center justify-center overflow-hidden shadow-[0_0_16px_rgba(130,69,236,0.45)]"
+                whileHover={{ scale: 1.12 }}
+              >
+                <img
+                  src={edu.img}
+                  alt={edu.school}
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </motion.div>
+            </Reveal>
 
-            {/* Content Card Container - adjusted padding for all screen sizes */}
             <div
               className={`w-full pl-16 sm:w-1/2 ${
-                index % 2 === 0
-                  ? "sm:pl-0 sm:pr-8"
-                  : "sm:pl-8 sm:ml-auto"
+                index % 2 === 0 ? "sm:pl-0 sm:pr-8" : "sm:pl-8 sm:ml-auto"
               }`}
             >
-              <div className="p-4 sm:p-6 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105">
-                {/* Header with smaller logo and gap on mobile */}
-                <div className="flex items-center gap-3 sm:gap-4 mb-4">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-md overflow-hidden flex-shrink-0">
-                    <img
-                      src={edu.img}
-                      alt={edu.school}
-                      className="w-full h-full object-contain"
-                    />
+              <Reveal direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+                <motion.div
+                  className="p-4 sm:p-6 rounded-2xl border border-gray-700/80 bg-gray-900/90 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.25)] glass-card"
+                  whileHover={{
+                    scale: 1.02,
+                    borderColor: "rgba(168, 85, 247, 0.45)",
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                >
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-md overflow-hidden flex-shrink-0">
+                      <img
+                        src={edu.img}
+                        alt={edu.school}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold text-white">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-sm text-gray-300">{edu.school}</p>
+                      <p className="text-xs text-gray-500 mt-1">{edu.date}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-sm text-gray-300">{edu.school}</p>
-                    <p className="text-xs text-gray-500 mt-1">{edu.date}</p>
-                  </div>
-                </div>
 
-                {/* Description and Grade */}
-                <p className="text-sm text-gray-400">{edu.desc}</p>
-                <p className="mt-3 text-sm font-semibold text-white">
-                  Grade: {edu.grade}
-                </p>
-              </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">{edu.desc}</p>
+                  <p className="mt-3 text-sm font-semibold text-purple-300">
+                    Grade: {edu.grade}
+                  </p>
+                </motion.div>
+              </Reveal>
             </div>
           </div>
         ))}

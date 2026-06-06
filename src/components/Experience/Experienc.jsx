@@ -1,5 +1,8 @@
 import React from "react";
-import { experiences } from "../../constants"; // Make sure this path is correct
+import { motion } from "framer-motion";
+import { experiences } from "../../constants";
+import SectionHeading from "../motion/SectionHeading";
+import Reveal from "../motion/Reveal";
 
 const Experience = () => {
   return (
@@ -7,78 +10,86 @@ const Experience = () => {
       id="experience"
       className="py-6 px-4 sm:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >
-      {/* Section Title */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EXPERIENCE</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg">
-          My professional journey and project experiences.
-        </p>
-      </div>
+      <SectionHeading
+        title="EXPERIENCE"
+        subtitle="My professional journey and project experiences."
+      />
 
-      {/* Experience Timeline */}
       <div className="relative">
-        {/* Vertical line that connects the timeline entries */}
-        <div className="absolute top-0 w-1 bg-gray-700 h-full left-5 sm:left-1/2 transform sm:-translate-x-1/2"></div>
+        <motion.div
+          className="absolute top-0 w-1 bg-gradient-to-b from-[#8245ec] via-purple-700/50 to-transparent h-full left-5 sm:left-1/2 transform sm:-translate-x-1/2 origin-top"
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        />
 
-        {/* Experience Entries */}
         {experiences.map((experience, index) => (
-          <div
-            key={experience.id}
-            className="relative mb-12"
-          >
-            {/* Timeline Circle */}
-            <div className="absolute left-5 sm:left-1/2 transform -translate-x-1/2 bg-gray-800 border-4 border-[#8245ec] w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center z-10">
-              <img
-                src={experience.img}
-                alt={experience.company}
-                className="w-full h-full object-cover rounded-full"
-              />
-            </div>
-
-            {/* Content Card Wrapper for layout */}
-            <div
-              className={`w-full sm:w-1/2
-                          ${
-                            index % 2 === 0
-                              ? "pl-14 sm:pl-0 sm:pr-8" // Left Card: Mobile padding, Desktop padding
-                              : "pl-14 sm:pl-8 sm:ml-auto" // Right Card: Mobile padding, Desktop padding
-                          }`}
-            >
-              {/* Actual Content Card */}
-              <div
-                className="p-4 sm:p-6 rounded-2xl border border-gray-700 bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] transform transition-transform duration-300 hover:scale-105"
+          <div key={experience.id} className="relative mb-12">
+            <Reveal direction="scale" delay={0.1}>
+              <motion.div
+                className={`absolute left-5 sm:left-1/2 transform -translate-x-1/2 border-4 border-[#8245ec] w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden z-10 ${experience.logoBg || "bg-white"} shadow-[0_0_16px_rgba(130,69,236,0.5)]`}
+                whileHover={{ scale: 1.15 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
               >
-                {/* Card Header: Role, Company, Date */}
-                <div className="flex flex-col">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white">
-                    {experience.role}
-                  </h3>
-                  <h4 className="text-md text-gray-300">
-                    {experience.company}
-                  </h4>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {experience.date}
+                <img
+                  src={experience.img}
+                  alt={experience.company}
+                  className={`w-full h-full object-cover ${experience.imgClass || ""}`}
+                />
+              </motion.div>
+            </Reveal>
+
+            <div
+              className={`w-full sm:w-1/2 ${
+                index % 2 === 0
+                  ? "pl-14 sm:pl-0 sm:pr-8"
+                  : "pl-14 sm:pl-8 sm:ml-auto"
+              }`}
+            >
+              <Reveal
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 0.08}
+              >
+                <motion.div
+                  className="p-4 sm:p-6 rounded-2xl border border-gray-700/80 bg-gray-900/90 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.25)] glass-card"
+                  whileHover={{
+                    scale: 1.02,
+                    borderColor: "rgba(168, 85, 247, 0.4)",
+                    boxShadow: "0 0 30px rgba(130, 69, 236, 0.35)",
+                  }}
+                  transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                >
+                  <div className="flex flex-col">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                      {experience.role}
+                    </h3>
+                    <h4 className="text-md text-gray-300">
+                      {experience.company}
+                    </h4>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {experience.date}
+                    </p>
+                  </div>
+
+                  <p className="mt-4 text-gray-400 leading-relaxed">
+                    {experience.desc}
                   </p>
-                </div>
 
-                {/* Description */}
-                <p className="mt-4 text-gray-400">{experience.desc}</p>
-
-                {/* Skills Section */}
-                <div className="mt-4">
-                  <ul className="flex flex-wrap gap-2">
-                    {experience.skills.map((skill, i) => (
-                      <li
-                        key={i}
-                        className="bg-purple-900/50 text-purple-300 px-3 py-1 text-xs sm:text-sm rounded-full border border-purple-600"
-                      >
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                  <div className="mt-4">
+                    <ul className="flex flex-wrap gap-2">
+                      {experience.skills.map((skill, i) => (
+                        <li
+                          key={i}
+                          className="bg-purple-900/50 text-purple-300 px-3 py-1 text-xs sm:text-sm rounded-full border border-purple-600/60"
+                        >
+                          {skill}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              </Reveal>
             </div>
           </div>
         ))}

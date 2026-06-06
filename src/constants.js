@@ -1,35 +1,42 @@
 // Skills Section Logo's
-import htmlLogo from './assets/tech_logo/html.png';
-import cssLogo from './assets/tech_logo/css.png';
 import javascriptLogo from './assets/tech_logo/javascript.png';
 import reactjsLogo from './assets/tech_logo/reactjs.png';
 import reduxLogo from './assets/tech_logo/redux.png';
 import nextjsLogo from './assets/tech_logo/nextjs.png';
 import tailwindcssLogo from './assets/tech_logo/tailwindcss.png';
 import materialuiLogo from './assets/tech_logo/materialui.png';
-import bootstrapLogo from './assets/tech_logo/bootstrap.png';
+import reactNativeLogo from './assets/tech_logo/Reactnative.png';
+import threejsLogo from './assets/tech_logo/threejs.png';
+import shadcnLogo from './assets/tech_logo/shadcn.png';
 import nodejsLogo from './assets/tech_logo/nodejs.png';
 import expressjsLogo from './assets/tech_logo/express.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
 import dockerlogo from './assets/tech_logo/docker.png'
 import firebaseLogo from './assets/tech_logo/firebase.png';
+import supabaseLogo from './assets/tech_logo/supabase.png';
+import clerkLogo from './assets/tech_logo/clerk.png';
+import neonLogo from './assets/tech_logo/neon.png';
+import fastapiLogo from './assets/tech_logo/fastapi.png';
+import inngestLogo from './assets/tech_logo/inngest.png';
 import pythonlogo from './assets/tech_logo/python.png';
 import javaLogo from './assets/tech_logo/java.png';
 import typescriptLogo from './assets/tech_logo/typescript.png';
 import postgresslogo from './assets/tech_logo/postgress.png'
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
-import vscodeLogo from './assets/tech_logo/vscode.png';
 import postmanLogo from './assets/tech_logo/postman.png';
-import netlifyLogo from './assets/tech_logo/netlify.png';
 import vercelLogo from './assets/tech_logo/vercel.png';
-import cursor from './assets/tech_logo/cursorAI.png'
+import claudeLogo from './assets/tech_logo/claude.png';
+import n8nLogo from './assets/tech_logo/n8n.png';
+import cloudinaryLogo from './assets/tech_logo/cloundinary.png';
+import zohocrmLogo from './assets/tech_logo/zohocrm.png';
+import vapiLogo from './assets/tech_logo/vapi.png';
 
 // Experience Section Logos
-import ioclLogo from './assets/company_logo/iocl.png';
+import ioclIcon from './assets/company_logo/iocl_icon.png';
 import seoulixlogo from './assets/company_logo/download.png';
-import bp from "./assets/company_logo/bp.png";
+import bpIcon from "./assets/company_logo/bp_icon.png";
 
 // Education Section Logos
 import kmpsLogo from './assets/education_logo/kmps.png';
@@ -45,15 +52,14 @@ export const SkillsInfo = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'HTML', logo: htmlLogo },
-      { name: 'CSS', logo: cssLogo },
-      { name: 'JavaScript', logo: javascriptLogo },
       { name: 'React JS', logo: reactjsLogo },
       { name: 'Redux', logo: reduxLogo },
       { name: 'Next JS', logo: nextjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Material UI', logo: materialuiLogo },
-      { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: 'Shadcn UI', logo: shadcnLogo },
+      { name: 'Three.js', logo: threejsLogo },
+      { name: 'React Native', logo: reactNativeLogo },
     ],
   },
   {
@@ -65,6 +71,11 @@ export const SkillsInfo = [
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'PostgreSQL', logo: postgresslogo },
       { name: 'Firebase', logo: firebaseLogo },
+      { name: 'Supabase', logo: supabaseLogo },
+      { name: 'Clerk', logo: clerkLogo },
+      { name: 'Neon', logo: neonLogo },
+      { name: 'FastAPI', logo: fastapiLogo },
+      { name: 'Inngest', logo: inngestLogo },
     ],
   },
   {
@@ -81,12 +92,14 @@ export const SkillsInfo = [
     skills: [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
-      { name: 'VS Code', logo: vscodeLogo },
       { name: 'Postman', logo: postmanLogo },
       { name: 'Vercel', logo: vercelLogo },
-      { name: 'Netlify', logo: netlifyLogo },
-      {name: 'Cursor AI', logo: cursor},
-      { name: 'Docker', logo: dockerlogo}
+      { name: 'Docker', logo: dockerlogo },
+      { name: 'Claude Code', logo: claudeLogo },
+      { name: 'Cloudinary', logo: cloudinaryLogo },
+      { name: 'Zoho CRM', logo: zohocrmLogo },
+      { name: 'n8n', logo: n8nLogo },
+      { name: 'Vapi', logo: vapiLogo },
     ],
   },
 ];
@@ -94,7 +107,8 @@ export const SkillsInfo = [
   export const experiences = [
     {
       id: 0,
-      img: bp,
+      img: bpIcon,
+      logoBg: "bg-white",
       role: "Full Stack Engineer",
       company: "BluParrot Ventures Pvt Ltd",
       date: "January 2026 - Present",
@@ -113,6 +127,7 @@ export const SkillsInfo = [
     {
       id: 2,
       img: seoulixlogo,
+      logoBg: "bg-black",
       role: "Full Stack Developer Intern",
       company: "Seoulix Technologies (OPC) pvt Ltd.",
       date: "November 2025 - January 2026",
@@ -129,7 +144,8 @@ export const SkillsInfo = [
     },
     {
       id: 3,
-      img: ioclLogo,
+      img: ioclIcon,
+      logoBg: "bg-white",
       role: "Summer Intern",
       company: "Indian Oil Corporation Limited (IOCL)",
       date: "May 2025 - June 2025",
