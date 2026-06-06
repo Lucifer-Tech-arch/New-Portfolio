@@ -45,7 +45,7 @@ import bsaLogo from './assets/education_logo/bsa.jpg';
 // Project Section Logos
 import tripnestLogo from './assets/work_logo/tripnest_logo.png';
 import vlcLogo from './assets/work_logo/vlc_logo.png';
-import dishaLogo from './assets/work_logo/disha_logo.png';
+import careerlogo from "./assets/work_logo/careerpilot_logo.png";
 import unifyaiLogo from './assets/work_logo/unifyai_logo.png';
 
 export const SkillsInfo = [
@@ -205,13 +205,13 @@ export const SkillsInfo = [
     },
     {
       id: 2,
-      title: "Disha - Career Advisory Web App",
+      title: "CareerPilot - AI HRMS Platform",
       description:
         "Developed a comprehensive mobile application that provides personalized career and education guidance by integrating local government/educational data with global career trends, supporting users from academic choices to professional growth.",
-      image: dishaLogo,
-      tags: ["React.js", "Gemini API", "Tailwind CSS", "Framer Motion", "Clerk Auth"],
-      github: "https://github.com/Lucifer-Tech-arch/Disha-frontend",
-      webapp: "https://delightful-zabaione-7a8532.netlify.app/",
+      image: careerlogo,
+      tags: ["TypeScript", "Next.js", "FireBase", "Socket.io", "Bull MQ", "JWT", "OpenAI", "Node.js", "Express.js", "PostgreSQL", "Redis", "LangChain", "Vactor DB", ],
+      github: "https://github.com/Lucifer-Tech-arch/CareerPilot",
+      webapp: "https://careerpilot.vercel.app/",
     },
     {
       id: 3,

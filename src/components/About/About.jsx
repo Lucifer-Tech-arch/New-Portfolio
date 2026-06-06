@@ -106,7 +106,7 @@ const About = () => {
             user-centric digital products with clean UI/UX and real-world impact.
           </motion.p>
           <motion.a
-            href=""
+            href="https://drive.google.com/file/d/1IHZsQLqwM6FiVNQFvaZb_uBDfykvIWP4/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold"
