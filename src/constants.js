@@ -207,7 +207,7 @@ export const SkillsInfo = [
       id: 2,
       title: "CareerPilot - AI HRMS Platform",
       description:
-        "Developed a comprehensive mobile application that provides personalized career and education guidance by integrating local government/educational data with global career trends, supporting users from academic choices to professional growth.",
+        "Developed a comprehensive AI-powered HRMS, ATS, LMS and Career Guidance platform.",
       image: careerlogo,
       tags: ["TypeScript", "Next.js", "FireBase", "Socket.io", "Bull MQ", "JWT", "OpenAI", "Node.js", "Express.js", "PostgreSQL", "Redis", "LangChain", "Vactor DB", ],
       github: "https://github.com/Lucifer-Tech-arch/CareerPilot",
